@@ -12,13 +12,59 @@
     </header>
     <main>
         <section class="section_hero-score">
-            <div class="header-hero-score">
+            <header class="header-hero-score">
                 <p><span class="score-number">68%</span> do dia</p>
                 <span class="score-status">Equilibrio</span>
-            </div>
+            </header>
             <p>Dia equilibrado e sustentável. Adaptações inteligentes mantêm o hábito vivo sem neura.</p>
             <!--Barra de progresso-->
         </section>
+        <h2>Suas 4 refeições</h2>
+        <section class="section_meals-breakfast">
+            <header class="header-meals">
+                <div class="mini-bar-progress"></div>
+                <h3>Café da Manhã</h3>
+                <p>Até 10h</p>
+                
+                <form method="get">
+                    <label class="meal-status-card" for="status-focus">
+                        <input type="radio" name="meal-status-option" id="status-focus">
+                        <div>   
+                            <p>Foco</p>
+                            <span>no plano</span>
+                        </div>
+                    </label>
+                    
+                    <label for="status-balanced" class="meal-status-card">
+                        <input type="radio" name="meal-status-option" id="status-balanced">
+                        <div>   
+                            <p>Equilibrado</p>
+                            <span>com ajuste</span>
+                        </div>
+                    </label>
+
+                    <label for="status-free" class="meal-status-card">
+                        <input type="radio" name="meal-status-option" id="status-free">
+                        <div>   
+                            <p>Livre</p>
+                            <span>sem culpa</span>
+                        </div>
+                    </label>
+
+                    <label for="status-skip" class="meal-status-card">
+                        <input type="radio" name="meal-status-option" id="status-skip">
+                        <div>   
+                            <p>Pular/Jejum</p>
+                            <span>não conta</span>
+                        </div>
+                    </label>
+                    <button> + anotação </button>
+                    <input type="text" placeholder="Ex: Ovos com café">
+                </form>
+            </header>
+        </section>
+
+        
     </main>
 </body>
 </html>
