@@ -1,0 +1,37 @@
+.section_hero-score {
+    background-color: var(--surface-card);
+    border: 1px solid #94a3b880;
+    box-shadow: 1px 1px 4px #a7b9d133;
+    border-radius: 18px;
+    padding: 20px 16px 16px;
+}
+
+.header-hero-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_hero-score .header-hero-score p {
+    font-weight: 500;
+}
+
+.section_hero-score .header-hero-score p > span {
+    color: var(--brand-equilibrio);
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.section_hero-score .header-hero-score > span {
+    color: var(--brand-equilibrio);
+    background-color: var(--brand-equilibrio-soft);
+    padding: 3px 5px;
+    border-radius: 20px;
+}
+
+.section_hero-score > p {
+    text-align: left;
+    font-weight: 400;
+    margin-top: 6px;
+}

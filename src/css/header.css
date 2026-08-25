@@ -1,0 +1,17 @@
+.section-header {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header img {
+    width: 140px;
+}
+
+.section-header span {
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid var(--text-muted);
+    border-radius: 18px;
+}
