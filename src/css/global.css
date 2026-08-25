@@ -46,3 +46,23 @@ main {
     margin: auto;
     width: 360px;
 }
+
+@media screen and (min-width:768px){
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 560px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    body {
+        font-size: 20px;
+    }
+
+    main {
+        width: 760px;
+    }
+}
