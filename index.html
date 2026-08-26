@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/assets/img/favicon.ico" type="image/x-icon">
     <title>NoRitmo</title>
 </head>
 <body>
-    <header>
-        <h1>NoRitmo</h1>
-        <span>Segunda-Feira, 24 de Agosto</span>
+    <header class="section-header">
+        <img src="./src/assets/img/logo.png" alt="">
+        <span>24 de Agosto</span>
     </header>
     <main>
         <section class="section_hero-score">
@@ -16,55 +18,198 @@
                 <p><span class="score-number">68%</span> do dia</p>
                 <span class="score-status">Equilibrio</span>
             </header>
-            <p>Dia equilibrado e sustentável. Adaptações inteligentes mantêm o hábito vivo sem neura.</p>
+            <p>Dia equilibrado e sustentável.
+                <br> Adaptações inteligentes mantêm o hábito vivo sem neura.</p>
             <!--Barra de progresso-->
         </section>
         <h2>Suas 4 refeições</h2>
-        <section class="section_meals-breakfast">
+        <section class="section_meals" id="meal-breakfast">
             <header class="header-meals">
                 <div class="mini-bar-progress"></div>
-                <h3>Café da Manhã</h3>
-                <p>Até 10h</p>
-                
-                <form method="get">
-                    <label class="meal-status-card" for="status-focus">
-                        <input type="radio" name="meal-status-option" id="status-focus">
-                        <div>   
+                <div class="meal-text">
+                    <h3>Café da Manhã</h3>
+                    <p>Até 10h</p>
+                </div>    
+            </header>
+            <form method="get" class="meal-status-section">
+                    <label class="meal-status-card" for="status-focus-breakfast">
+                        <input type="radio" name="meal-status-breakfast" id="status-focus-breakfast" class="meal-status-option" value="focus">
+                        <div class="text-status">   
                             <p>Foco</p>
                             <span>no plano</span>
                         </div>
                     </label>
                     
-                    <label for="status-balanced" class="meal-status-card">
-                        <input type="radio" name="meal-status-option" id="status-balanced">
-                        <div>   
+                    <label for="status-balanced-breakfast" class="meal-status-card">
+                        <input type="radio" name="meal-status-breakfast" id="status-balanced-breakfast" class="meal-status-option" value="balanced">
+                        <div class="text-status">   
                             <p>Equilibrado</p>
                             <span>com ajuste</span>
                         </div>
                     </label>
 
-                    <label for="status-free" class="meal-status-card">
-                        <input type="radio" name="meal-status-option" id="status-free">
-                        <div>   
+                    <label for="status-free-breakfast" class="meal-status-card">
+                        <input type="radio" name="meal-status-breakfast" id="status-free-breakfast" class="meal-status-option" value="free">
+                        <div class="text-status">   
                             <p>Livre</p>
                             <span>sem culpa</span>
                         </div>
                     </label>
 
-                    <label for="status-skip" class="meal-status-card">
-                        <input type="radio" name="meal-status-option" id="status-skip">
-                        <div>   
+                    <label for="status-skip-breakfast" class="meal-status-card">
+                        <input type="radio" name="meal-status-breakfast" id="status-skip-breakfast" class="meal-status-option" value="free">
+                        <div class="text-status">   
                             <p>Pular/Jejum</p>
                             <span>não conta</span>
                         </div>
-                    </label>
-                    <button> + anotação </button>
-                    <input type="text" placeholder="Ex: Ovos com café">
+                    </label> 
                 </form>
-            </header>
+                <div class="footer-meals-card">
+                        <button> + anotação </button>
+                        <input type="text" placeholder="Ex: Ovos com café" class="notes-meals breakfast">
+                    </div>
         </section>
 
+        <section class="section_meals" id="meal-lunch">
+            <header class="header-meals">
+                <div class="mini-bar-progress"></div>
+                <div class="meal-text">
+                    <h3>Almoço</h3>
+                    <p>11h - 14h</p>
+                </div>    
+            </header>
+            <form method="get" class="meal-status-section">
+                    <label class="meal-status-card" for="status-focus-lunch">
+                        <input type="radio" name="meal-status-lunch" id="status-focus-lunch" class="meal-status-option" value="focus">
+                        <div class="text-status">   
+                            <p>Foco</p>
+                            <span>no plano</span>
+                        </div>
+                    </label>
+                    
+                    <label for="status-balanced-lunch" class="meal-status-card">
+                        <input type="radio" name="meal-status-lunch" id="status-balanced-lunch" class="meal-status-option" value="balanced">
+                        <div class="text-status">   
+                            <p>Equilibrado</p>
+                            <span>com ajuste</span>
+                        </div>
+                    </label>
+
+                    <label for="status-free-lunch" class="meal-status-card">
+                        <input type="radio" name="meal-status-lunch" id="status-free-lunch" class="meal-status-option" value="free">
+                        <div class="text-status">   
+                            <p>Livre</p>
+                            <span>sem culpa</span>
+                        </div>
+                    </label>
+
+                    <label for="status-skip-lunch" class="meal-status-card">
+                        <input type="radio" name="meal-status-lunch" id="status-skip-lunch" class="meal-status-option" value="skip">
+                        <div class="text-status">   
+                            <p>Pular/Jejum</p>
+                            <span>não conta</span>
+                        </div>
+                    </label> 
+                </form>
+                <div class="footer-meals-card">
+                        <button> + anotação </button>
+                        <input type="text" placeholder="Ex: Arroz, feijão, frango grelhado" class="notes-meals lunch">
+                    </div>
+        </section>
+
+        <section class="section_meals" id="meal-snack">
+            <header class="header-meals">
+                <div class="mini-bar-progress"></div>
+                <div class="meal-text">
+                    <h3>Lanche da tarde</h3>
+                    <p>15h - 18h</p>
+                </div>    
+            </header>
+            <form method="get" class="meal-status-section">
+                    <label class="meal-status-card" for="status-focus-snack">
+                        <input type="radio" name="meal-status-snack" id="status-focus-snack" class="meal-status-option" value="focus">
+                        <div class="text-status">   
+                            <p>Foco</p>
+                            <span>no plano</span>
+                        </div>
+                    </label>
+                    
+                    <label for="status-balanced-snack" class="meal-status-card">
+                        <input type="radio" name="meal-status-snack" id="status-balanced-snack" class="meal-status-option" value="balanced">
+                        <div class="text-status">   
+                            <p>Equilibrado</p>
+                            <span>com ajuste</span>
+                        </div>
+                    </label>
+
+                    <label for="status-free-snack" class="meal-status-card">
+                        <input type="radio" name="meal-status-snack" id="status-free-snack" class="meal-status-option" value="free">
+                        <div class="text-status">   
+                            <p>Livre</p>
+                            <span>sem culpa</span>
+                        </div>
+                    </label>
+
+                    <label for="status-skip-snack" class="meal-status-card">
+                        <input type="radio" name="meal-status-snack" id="status-skip-snack" class="meal-status-option" value="skip">
+                        <div class="text-status">   
+                            <p>Pular/Jejum</p>
+                            <span>não conta</span>
+                        </div>
+                    </label> 
+                </form>
+                <div class="footer-meals-card">
+                        <button> + anotação </button>
+                        <input type="text" placeholder="Ex: Crepioca com frango" class="notes-meals snack">
+                    </div>
+        </section>
         
+        <section class="section_meals" id="meal-dinner">
+            <header class="header-meals">
+                <div class="mini-bar-progress"></div>
+                <div class="meal-text">
+                    <h3>Jantar</h3>
+                    <p>Após 19h</p>
+                </div>    
+            </header>
+            <form method="get" class="meal-status-section">
+                    <label class="meal-status-card" for="status-focus-dinner">
+                        <input type="radio" name="meal-status-dinner" id="status-focus-dinner" class="meal-status-option" value="focus">
+                        <div class="text-status">   
+                            <p>Foco</p>
+                            <span>no plano</span>
+                        </div>
+                    </label>
+                    
+                    <label for="status-balanced-dinner" class="meal-status-card">
+                        <input type="radio" name="meal-status-dinner" id="status-balanced-dinner" class="meal-status-option" value="balanced">
+                        <div class="text-status">   
+                            <p>Equilibrado</p>
+                            <span>com ajuste</span>
+                        </div>
+                    </label>
+
+                    <label for="status-free-dinner" class="meal-status-card">
+                        <input type="radio" name="meal-status-dinner" id="status-free-dinner" class="meal-status-option" value="free">
+                        <div class="text-status">   
+                            <p>Livre</p>
+                            <span>sem culpa</span>
+                        </div>
+                    </label>
+
+                    <label for="status-skip-dinner" class="meal-status-card">
+                        <input type="radio" name="meal-status-dinner" id="status-skip-dinner" class="meal-status-option" value="skip">
+                        <div class="text-status">   
+                            <p>Pular/Jejum</p>
+                            <span>não conta</span>
+                        </div>
+                    </label> 
+                </form>
+                <div class="footer-meals-card">
+                        <button> + anotação </button>
+                        <input type="text" placeholder="Ex: Bowl de salada" class="notes-meals dinner">
+                    </div>
+        </section>
     </main>
 </body>
 </html>

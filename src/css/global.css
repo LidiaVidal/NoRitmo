@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --text-on-brand: #ffffff;
+        
+    /* Cores de Ação e Feedback */
+    --brand-foco: #10b981;
+    --brand-foco-hover: #059669;
+    --brand-foco-soft: #d1fae5;
+
+    --brand-equilibrio: #f59e0b;
+    --brand-equilibrio-hover: #d97706;
+    --brand-equilibrio-soft: #fef3c7;
+    --brand-livre: #64748b;
+    --brand-livre-hover: #475569;
+    --brand-livre-soft: #e2e8f0;
+    
+    --brand-pular: #94a3b8;
+    --brand-pular-soft: #f1f5f9;
+    
+    /* Superfícies e Estrutura */
+    --bg-app: #f8fafc;
+    --surface-card: #ffffff;
+    --surface-subtle: #f1f5f9;
+    --border-card: #e2e8f0;
+    --border-focus: #3b82f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-app);
+    font-family:  "Inter", sans-serif;
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+main {
+    margin: auto;
+    width: 100%;
+    max-width: 360px;
+}
+
+h2 {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width:768px){
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 560px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    body {
+        font-size: 20px;
+    }
+
+    main {
+        width: 760px;
+    }
+}

@@ -1,0 +1,104 @@
+.section_meals {
+    background-color: var(--surface-card);
+    border: 1px solid #94a3b880;
+    box-shadow: 1px 1px 4px #a7b9d133;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.section_meals .header-meals {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section_meals .header-meals .mini-bar-progress {
+    width: 4px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--brand-equilibrio);
+}
+
+.section_meals .header-meals .meal-text h3{
+    color: var(--text-primary);
+}
+
+.section_meals .meal-status-section {
+    margin: 8px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.section_meals .meal-status-card .meal-status-option {
+    display: none;
+    
+}
+
+.section_meals .meal-status-card .text-status{
+    background-color: var(--surface-card);
+    border: 1px solid #94a3b880;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.section_meals .meal-status-card .text-status p {
+    color: var(--text-primary);
+}
+
+.section_meals .meal-status-card .text-status:hover{
+    border: 1px solid var(--text-muted);
+}
+
+.section_meals .meal-status-card .meal-status-option:checked + .text-status{
+    color: var(--surface-card);
+}
+
+.section_meals .meal-status-card .meal-status-option:checked + .text-status p{
+    color: var(--surface-card);
+}
+
+.section_meals .meal-status-card .meal-status-option[value="focus"]:checked + .text-status {
+    background-color: var(--brand-foco);    
+}
+
+.section_meals .meal-status-card .meal-status-option[value="balanced"]:checked + .text-status {
+    background-color: var(--brand-equilibrio);    
+}
+
+.section_meals .meal-status-card .meal-status-option[value="free"]:checked + .text-status {
+    background-color: var(--brand-livre);    
+}
+
+.section_meals .meal-status-card .meal-status-option[value="skip"]:checked + .text-status {
+    background-color: var(--brand-pular);    
+}
+
+.section_meals .footer-meals-card button {
+    color: var(--text-secondary);
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    margin: 8px;
+}
+
+.footer-meals-card .notes-meals{
+    /*Alterar display pelo JS*/
+    display: none;
+    background-color: #94a3b880;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-meals-card .notes-meals::placeholder{
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.footer-meals-card .notes-meals:focus{
+    outline: none;
+    border: 1px solid var(--text-muted);
+}
