@@ -17,6 +17,10 @@
 }
 
 @media screen and (min-width:768px){
+    .section-header {
+        max-width: 600px;
+        margin: 20px auto;
+    }
     .section-header img {
         width: 180px;
     }
@@ -26,5 +30,19 @@
         font-size: 16px;
         border: 1px solid var(--text-muted);
         border-radius: 18px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .section-header {
+        max-width: 800px;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .section-header {
+        max-width: 1024px;
+        margin: 20px auto;
     }
 }

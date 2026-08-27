@@ -59,7 +59,7 @@ h2 {
     }
 
     main {
-        width: 560px;
+        max-width: 560px;
     }
 }
 
@@ -69,6 +69,12 @@ h2 {
     }
 
     main {
-        width: 760px;
+        max-width: 760px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    main {
+        max-width: 1024px;
     }
 }
