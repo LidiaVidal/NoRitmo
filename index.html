@@ -25,7 +25,7 @@
 
         <h2>Suas 4 refeições</h2>
 
-        <section class="section_meals" id="meal-breakfast">
+        <section class="section_meals" id="meal-breakfast" data-status="balanced">
             <header class="header-meals">
                 <div class="mini-bar-progress"></div>
                 <div class="meal-text">
@@ -67,12 +67,12 @@
                     </label> 
                 </form>
                 <div class="footer-meals-card">
-                        <button> + anotação </button>
+                        <button class="btn breakfast"> + anotação </button>
                         <input type="text" placeholder="Ex: Ovos com café" class="notes-meals breakfast">
                     </div>
         </section>
 
-        <section class="section_meals" id="meal-lunch">
+        <section class="section_meals" id="meal-lunch" data-status="balanced">
             <header class="header-meals">
                 <div class="mini-bar-progress"></div>
                 <div class="meal-text">
@@ -114,12 +114,12 @@
                     </label> 
                 </form>
                 <div class="footer-meals-card">
-                        <button> + anotação </button>
+                        <button class="btn lunch"> + anotação </button>
                         <input type="text" placeholder="Ex: Arroz, feijão, frango grelhado" class="notes-meals lunch">
                     </div>
         </section>
 
-        <section class="section_meals" id="meal-snack">
+        <section class="section_meals" id="meal-snack" data-status="balanced">
             <header class="header-meals">
                 <div class="mini-bar-progress"></div>
                 <div class="meal-text">
@@ -161,12 +161,12 @@
                     </label> 
                 </form>
                 <div class="footer-meals-card">
-                        <button> + anotação </button>
+                        <button class="btn snack"> + anotação </button>
                         <input type="text" placeholder="Ex: Crepioca com frango" class="notes-meals snack">
                     </div>
         </section>
         
-        <section class="section_meals" id="meal-dinner">
+        <section class="section_meals" id="meal-dinner" data-status="balanced">
             <header class="header-meals">
                 <div class="mini-bar-progress"></div>
                 <div class="meal-text">
@@ -208,11 +208,12 @@
                     </label> 
                 </form>
                 <div class="footer-meals-card">
-                        <button> + anotação </button>
+                        <button class="btn dinner"> + anotação </button>
                         <input type="text" placeholder="Ex: Bowl de salada" class="notes-meals dinner">
                     </div>
         </section>
     </main>
-    <script type="module" src="./src/scripts/main.js"></script>
+    <!--<script type="module" src="./src/scripts/main.js"></script>-->
+    <script src="./src/scripts/modules/meals.js"></script>
 </body>
 </html>

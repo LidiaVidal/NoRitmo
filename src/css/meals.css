@@ -17,7 +17,23 @@
     width: 4px;
     height: 30px;
     border-radius: 5px;
+    background-color: var(--surface-card);
+}
+
+.section_meals[data-status="focus"] .header-meals .mini-bar-progress{
+    background-color: var(--brand-foco);
+}
+
+.section_meals[data-status="balanced"] .header-meals .mini-bar-progress{
     background-color: var(--brand-equilibrio);
+}
+
+.section_meals[data-status="free"] .header-meals .mini-bar-progress{
+    background-color: var(--brand-livre);
+}
+
+.section_meals[data-status="skip"] .header-meals .mini-bar-progress{
+    background-color: var(--brand-pular);
 }
 
 .section_meals .header-meals .meal-text h3{
