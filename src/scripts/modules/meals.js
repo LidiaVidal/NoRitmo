@@ -1,9 +1,12 @@
 //Cores e botao de anotação
-const optionFoco = document.querySelector('#status-focus-breakfast')
+const refeicoes = document.querySelectorAll('.section_meals')
 
-optionFoco.addEventListener('click', mudarCorFoco)
+refeicoes.forEach(section => {
+    const radios = section.querySelectorAll('.meal-status-option')
 
-function mudarCorFoco() {
-    const barra = document.querySelector('.mini-bar-progress')
-    barra.style.setProperty('--brand-foco', '--surface-card')
-}
+    radios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            section.dataset.status = e.target.value
+        })
+    })
+})
