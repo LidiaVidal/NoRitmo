@@ -47,6 +47,8 @@ function mostrarScore(pontos) {
     const scoreStatus = document.querySelector('.score-status')
     const scoreTexto = document.querySelector('.text-score')
     const secaoScore = document.querySelector('.section_hero-score')
+    const barraProgresso = document.querySelector('.progresso')
+    barraProgresso.style.width = `${pontos}%`
 
     if(pontos >= 75 && pontos <= 100) {
         secaoScore.dataset.status = 'focus'

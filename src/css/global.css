@@ -53,6 +53,12 @@ h2 {
     margin-bottom: 16px;
 }
 
+@media screen and (max-width:380px) {
+    main {
+        max-width: 300px;
+    }
+}
+
 @media screen and (min-width:768px){
     body {
         font-size: 18px;
@@ -69,12 +75,12 @@ h2 {
     }
 
     main {
-        max-width: 760px;
+        max-width: 690px;
     }
 }
 
 @media screen and (min-width:1440px){
     main {
-        max-width: 1024px;
+        max-width: 760px;
     }
 }
