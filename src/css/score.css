@@ -38,8 +38,8 @@
 
 
 .section_hero-score .header-hero-score > span {
-    color: var(--brand-equilibrio);
-    background-color: var(--brand-equilibrio-soft);
+    color: var(--brand-livre);
+    background-color: var(--brand-livre-soft);
     padding: 3px 5px;
     border-radius: 20px;
 }
@@ -77,7 +77,7 @@
 }
 
 .progresso {
-    width: 67%;
+    width: 0%;
     height: 20px;
     background-color: var(--brand-equilibrio);
     border-radius: 15px;

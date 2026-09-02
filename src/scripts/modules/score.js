@@ -1,4 +1,11 @@
-function pegaRadio() {
+export function escutaCliques() {
+    const radios = document.querySelectorAll('.meal-status-option')
+    radios.forEach(radio => {
+        radio.addEventListener('change', calcularProgressoDiario)
+    })   
+}
+
+function calcularProgressoDiario() {
     let refeicaoRegistrada = 0
     let valorRadio = ''
     let pontosRefeicao = 0
@@ -22,7 +29,6 @@ function pegaRadio() {
                     }
                 }
         })
-
         
     })
 
@@ -31,13 +37,6 @@ function pegaRadio() {
         mostrarScore(score)
     }
     
-}
-
-function escutaCliques() {
-    const radios = document.querySelectorAll('.meal-status-option')
-    radios.forEach(radio => {
-        radio.addEventListener('change', pegaRadio)
-    })   
 }
 
 function mostrarScore(pontos) {
@@ -66,4 +65,3 @@ function mostrarScore(pontos) {
     }
 }
 
-escutaCliques()
