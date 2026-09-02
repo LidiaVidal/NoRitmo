@@ -17,7 +17,7 @@
     width: 4px;
     height: 30px;
     border-radius: 5px;
-    background-color: var(--surface-card);
+    background-color: var(--border-card);
 }
 
 .section_meals[data-status="focus"] .header-meals .mini-bar-progress{
