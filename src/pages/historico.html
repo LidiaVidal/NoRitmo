@@ -12,31 +12,38 @@
         <a href="../../index.html">
             <img src="../assets/img/logo.png" alt="">
         </a>
-        <a href="../../index.html">Voltar para Hoje</a>
+        <a href="../../index.html" class="btn-navegar-pagina">
+            <img src="../assets/icon/icon-arrow-left.png" alt="">Voltar para Hoje</a>
     </header>
     <main>
-        <h1>Seu histórico</h1>
-        <p>Acompanhe suas métricas com facilidade</p>
+        <h1 class="title-pagina">Seu histórico</h1>
 
-        <section class="historico">
-            <header class="header-history-section">
-                <span id="date"></span>
-                <div class="score-historico">
-                    <p class="score-number">0%</p>
-                    <span class="score-status">Neutro</span>
+        <section class="historico-dia" data-status="balanced">
+            <header class="header-historico-section">
+        
+                <div class="header-left">
+                    <span id="date"></span> 
+                    <img src="../assets/icon/icon-arrow-down.png" alt="Expandir detalhes" class="seta-acordeao">
                 </div>
-                <p>--</p>
+                <div class="header-right">
+                    <div class="score-historico">
+                        <p class="score-number">60%</p>
+                        <span class="score-status">Equilíbrio</span>
+                    </div>
+                    
+                </div>
+                
             </header>
             <div class="historico-content">
-                <p class="historico-refeicao">Café da manhã: <span class="status-refeicao">Foco</span></p>
+                <p class="historico-refeicao">Café da manhã: <span class="status-refeicao" data-status="focus">Foco</span></p>
                 <p class="historico-anotacoes">Ovos com café</p>
 
-                <p class="historico-refeicao">Almoço: <span class="status-refeicao">Foco</span></p>
+                <p class="historico-refeicao">Almoço: <span class="status-refeicao" data-status="focus">Foco</span></p>
                 <p class="historico-anotacoes">Ovos com café</p>
 
-                <p class="historico-refeicao">Lanche da tarde: <span class="status-refeicao">Equilibrio</span></p>
+                <p class="historico-refeicao">Lanche da tarde: <span class="status-refeicao" data-status="balanced">Equilibrio</span></p>
 
-                <p class="historico-refeicao">Jantar: <span class="status-refeicao">Pular/Jejum</span></p>
+                <p class="historico-refeicao">Jantar: <span class="status-refeicao" data-status="skip">Pular/Jejum</span></p>
                 <p class="historico-anotacoes">Ovos com café</p>
             </div>
         </section>
