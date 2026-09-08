@@ -1,9 +1,22 @@
+import {historicoRefeicoes} from './storage.js'
+
 export function escutaCliques() {
     const radios = document.querySelectorAll('.meal-status-option')
     radios.forEach(radio => {
-        radio.addEventListener('change', calcularProgressoDiario)
+        radio.addEventListener('change', () => {
+            calcularProgressoDiario()
+            historicoRefeicoes()
+        })
     })   
+
+    const inputsAnotacao = document.querySelectorAll('.notes-meals');
+    inputsAnotacao.forEach(input => {
+        input.addEventListener('blur', () => {
+            historicoRefeicoes();
+        });
+    });
 }
+
 
 function calcularProgressoDiario() {
     let refeicaoRegistrada = 0
