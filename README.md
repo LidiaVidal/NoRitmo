@@ -1,3 +1,4 @@
+![Tela inicial do NoRitmo](telaInicial.png)
 # 🍏 NoRitmo - Placar de Consistência Alimentar
 
 > 🚧 **Aviso:** Este projeto está atualmente em construção. A interface e as funcionalidades estão em desenvolvimento e podem passar por atualizações.
