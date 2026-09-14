@@ -1,3 +1,4 @@
+/* Header da página de histórico: layout em coluna centralizado */
 .section-header.historico {
     display: flex;
     flex-direction: column;
@@ -5,6 +6,7 @@
     
 }
 
+/* Botão de navegação (voltar/ver histórico) com ícone */
 .btn-navegar-pagina {
     display: flex;
     align-items: center;
@@ -19,6 +21,7 @@
     width: 30px;
 }
 
+/* Título da página de histórico */
 .title-pagina {
     color: var(--text-primary);
     font-size: 20px;
@@ -26,6 +29,7 @@
     margin-bottom: 20px;
 }
 
+/* Card de um dia no histórico: borda esquerda colorida indica o status */
 .historico-dia {
     padding: 16px;
     background-color: var(--surface-card);
@@ -36,6 +40,7 @@
     margin-bottom: 18px;
 }
 
+/* Cor da borda esquerda conforme o status do dia */
 .historico-dia[data-status='focus'] {
     border-left: 6px solid var(--brand-foco); 
 }
@@ -48,6 +53,7 @@
     border-left: 6px solid var(--brand-livre); 
 }
 
+/* Header do card: data à esquerda, score à direita */
 .historico-dia .header-historico-section {
     display: flex;
     justify-content: space-between;
@@ -60,6 +66,7 @@
     flex-direction: column;
 }
 
+/* Badge da data com borda arredondada */
 .historico-dia .header-historico-section div .dateHistorico {
     font-size: 16px;
     font-weight: 400;
@@ -69,11 +76,13 @@
     border-radius: 16px;
 }
 
+/* Seta do acordeão para expandir/recolher detalhes */
 .historico-dia .header-historico-section .header-left > img {
     width: 30px;
     margin-top: 5px;
 }
 
+/* Score do histórico: número + badge em coluna */
 .score-historico {
     display: flex;
     flex-direction: column;
@@ -86,6 +95,7 @@
     margin-bottom: 4px;
 }
 
+/* Cor do número do score conforme o data-status */
 .historico-dia[data-status='focus'] .score-historico .score-number {
     color: var(--brand-foco);
 }
@@ -99,6 +109,7 @@
 }
 
 
+/* Badge de status padrão (cinza) */
 .score-status  {
     color: var(--brand-livre);
     background-color: var(--brand-livre-soft);
@@ -106,6 +117,7 @@
     border-radius: 20px;
 }
 
+/* Cor do badge conforme o status do dia */
 .historico-dia[data-status='focus'] .score-status {
     color: var(--brand-foco);
     background-color: var(--brand-foco-soft);
@@ -122,20 +134,24 @@
 }
 
 
+/* Conteúdo expandível do acordeão */
 .historico-content {
     margin-top: 8px;
     display: block;
 }
 
+/* Classe que oculta o conteúdo (toggle via JS) */
 .historico-content.escondido {
     display: none;
 }
 
+/* Nome e status de cada refeição no histórico */
 .historico-refeicao {
     color: var(--text-primary);
     margin-bottom: 4px;
 }
 
+/* Cores do status de cada refeição individual */
 .historico-refeicao .status-refeicao[data-status='focus']{
     color: var(--brand-foco);
 }
@@ -152,6 +168,7 @@
     color: var(--brand-pular);
 }
 
+/* Anotações: texto em itálico e menor, com recuo à esquerda */
 .historico-anotacoes {
     font-style: italic;
     font-size: 14px;

@@ -1,7 +1,10 @@
+// Módulo de score: calcula a pontuação diária e atualiza a interface visual
 import {historicoRefeicoes} from './storage.js'
 
+// Registra listeners nos radios e inputs de anotação para recalcular score e salvar dados
 export function escutaCliques() {
     const radios = document.querySelectorAll('.meal-status-option')
+    // A cada mudança de status, recalcula o score e salva no localStorage
     radios.forEach(radio => {
         radio.addEventListener('change', () => {
             calcularProgressoDiario()
@@ -9,6 +12,7 @@ export function escutaCliques() {
         })
     })   
 
+    // Ao sair do campo de anotação (blur), salva o texto no localStorage
     const inputsAnotacao = document.querySelectorAll('.notes-meals');
     inputsAnotacao.forEach(input => {
         input.addEventListener('blur', () => {
@@ -18,17 +22,19 @@ export function escutaCliques() {
 }
 
 
+// Percorre todas as refeições, soma pontos e calcula a média do score diário
 function calcularProgressoDiario() {
     let refeicaoRegistrada = 0
     let valorRadio = ''
     let pontosRefeicao = 0
 
-    //Analisa cada clique e atribui uma pontuação
     const refeicoes = document.querySelectorAll('.section_meals')
+    // Para cada seção de refeição, verifica qual radio está marcado
     refeicoes.forEach(section => {
 
         const radios = section.querySelectorAll('.meal-status-option')
 
+        // Atribui pontos: focus=100, balanced=70, free=0, skip não conta
         radios.forEach(radio => {
                 if(radio.checked) {
                     valorRadio = radio.value
@@ -47,6 +53,7 @@ function calcularProgressoDiario() {
         
     })
 
+    // Calcula a média apenas se houver refeições registradas (evita divisão por zero)
     if (refeicaoRegistrada > 0) {
         let score = Math.round(pontosRefeicao / refeicaoRegistrada)
         mostrarScore(score)
@@ -55,7 +62,7 @@ function calcularProgressoDiario() {
 }
 
 
-//Mostra score já estilizado na página principal
+// Exibe o score na tela e atualiza o visual (cor, texto e barra) conforme a faixa
 function mostrarScore(pontos) {
     const scoreResultado = document.querySelector('.score-number')
     scoreResultado.textContent = `${pontos}%`
@@ -64,8 +71,10 @@ function mostrarScore(pontos) {
     const scoreTexto = document.querySelector('.text-score')
     const secaoScore = document.querySelector('.section_hero-score')
     const barraProgresso = document.querySelector('.progresso')
+    // Ajusta a largura da barra de progresso conforme o score
     barraProgresso.style.width = `${pontos}%`
 
+    // Faixas: 75-100 = Excelente (verde), 50-74 = Equilíbrio (amarelo), <50 = Recalibrar (cinza)
     if(pontos >= 75 && pontos <= 100) {
         secaoScore.dataset.status = 'focus'
         scoreStatus.textContent = 'Excelente'

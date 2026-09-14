@@ -1,3 +1,4 @@
+/* Seção hero do score: card principal com porcentagem e barra de progresso */
 .section_hero-score {
     background-color: var(--surface-card);
     border: 1px solid #94a3b880;
@@ -7,6 +8,7 @@
     padding: 20px 16px 16px;
 }
 
+/* Header do score: porcentagem à esquerda, badge de status à direita */
 .header-hero-score {
     display: flex;
     justify-content: space-between;
@@ -17,13 +19,14 @@
     font-weight: 500;
 }
 
+/* Número do score em destaque (tamanho grande) */
 .section_hero-score .header-hero-score p > span {
     font-size: 30px;
     font-weight: 600;
     margin-right: 5px;
 }
 
-/*Data-status estilo*/
+/* Cor do número do score conforme o data-status */
 .section_hero-score[data-status='focus'] .header-hero-score p > span {
     color: var(--brand-foco);
 }
@@ -37,6 +40,7 @@
 }
 
 
+/* Badge de status com cor de fundo suave */
 .score-status  {
     color: var(--brand-livre);
     background-color: var(--brand-livre-soft);
@@ -44,6 +48,7 @@
     border-radius: 20px;
 }
 
+/* Cor do badge de status conforme a faixa de score */
 .section_hero-score[data-status='focus'] .header-hero-score > span {
     color: var(--brand-foco);
     background-color: var(--brand-foco-soft);
@@ -59,12 +64,14 @@
     background-color: var(--brand-livre-soft);
 }
 
+/* Texto motivacional abaixo do score */
 .section_hero-score > p {
     text-align: left;
     font-weight: 400;
     margin-top: 6px;
 }
 
+/* Container da barra de progresso (fundo cinza claro) */
 .barra-progresso {
     display: flex;
     align-items: center;
@@ -76,6 +83,7 @@
     border-radius: 15px;
 }
 
+/* Preenchimento da barra: largura controlada via JS, com transição suave */
 .progresso {
     width: 0%;
     height: 20px;
@@ -85,6 +93,7 @@
     transition: width 0.3s ease-out, background-color 0.4s ease-in-out;
 }
 
+/* Cor da barra de progresso conforme o data-status */
 .section_hero-score[data-status='focus'] .progresso {
     background-color: var(--brand-foco);
 }
@@ -97,6 +106,7 @@
     background-color: var(--brand-livre);
 }
 
+/* Responsividade: aumenta o tamanho do score em telas maiores */
 @media screen and (min-width:768px){
     .section_hero-score .header-hero-score p > span {
         font-size: 40px;

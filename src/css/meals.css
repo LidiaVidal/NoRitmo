@@ -1,3 +1,4 @@
+/* Card de refeição: container com borda, sombra e cantos arredondados */
 .section_meals {
     background-color: var(--surface-card);
     border: 1px solid #94a3b880;
@@ -7,12 +8,14 @@
     margin-bottom: 18px;
 }
 
+/* Header do card: mini barra + nome da refeição alinhados horizontalmente */
 .section_meals .header-meals {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
+/* Mini barra lateral indicadora de status (cor padrão: cinza) */
 .section_meals .header-meals .mini-bar-progress {
     width: 4px;
     height: 30px;
@@ -20,6 +23,7 @@
     background-color: var(--border-card);
 }
 
+/* Cores da mini barra conforme o data-status selecionado */
 .section_meals[data-status="focus"] .header-meals .mini-bar-progress{
     background-color: var(--brand-foco);
 }
@@ -40,6 +44,7 @@
     color: var(--text-primary);
 }
 
+/* Grid 2x2 para os 4 cards de status da refeição */
 .section_meals .meal-status-section {
     margin: 10px auto;
     display: grid;
@@ -47,11 +52,13 @@
     gap: 10px;
 }
 
+/* Esconde o input radio nativo (estilização via label) */
 .section_meals .meal-status-card .meal-status-option {
     display: none;
     
 }
 
+/* Card de opção de status com borda e padding */
 .section_meals .meal-status-card .text-status{
     background-color: var(--surface-card);
     border: 1px solid #94a3b880;
@@ -63,10 +70,12 @@
     color: var(--text-primary);
 }
 
+/* Hover: destaca a borda ao passar o mouse */
 .section_meals .meal-status-card .text-status:hover{
     border: 1px solid var(--text-muted);
 }
 
+/* Quando selecionado: texto fica branco */
 .section_meals .meal-status-card .meal-status-option:checked + .text-status{
     color: var(--surface-card);
 }
@@ -75,6 +84,7 @@
     color: var(--surface-card);
 }
 
+/* Cor de fundo do card conforme o valor do radio selecionado */
 .section_meals .meal-status-card .meal-status-option[value="focus"]:checked + .text-status {
     background-color: var(--brand-foco);    
 }
@@ -91,6 +101,7 @@
     background-color: var(--brand-pular);    
 }
 
+/* Botão de anotação: estilo simples sem fundo */
 .section_meals .footer-meals-card button {
     color: var(--text-secondary);
     font-size: 16px;
@@ -99,6 +110,7 @@
     margin: 8px;
 }
 
+/* Campo de anotação: oculto por padrão, exibido via JS ao clicar no botão */
 .footer-meals-card .notes-meals{
     /*Alterar display pelo JS*/
     display: none;
@@ -114,11 +126,13 @@
     font-size: 16px;
 }
 
+/* Remove outline padrão e adiciona borda ao focar no input */
 .footer-meals-card .notes-meals:focus{
     outline: none;
     border: 1px solid var(--text-muted);
 }
 
+/* Responsividade: tablet */
 @media screen and (min-width:768px){
     .section_meals .footer-meals-card button {
         font-size: 18px; 
@@ -129,6 +143,7 @@
     }
 }
 
+/* Responsividade: desktop */
 @media screen and (min-width:1024px){
     .section_meals .footer-meals-card button {
         font-size: 20px; 

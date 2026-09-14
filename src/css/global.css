@@ -1,27 +1,34 @@
+/* Importa a fonte Inter do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Variáveis globais de cores do design system */
 :root {
+    /* Cores de texto */
     --text-primary: #0f172a;
     --text-secondary: #64748b;
     --text-muted: #94a3b8;
     --text-on-brand: #ffffff;
         
-    /* Cores de Ação e Feedback */
+    /* Cores de status: Foco (verde) */
     --brand-foco: #10b981;
     --brand-foco-hover: #059669;
     --brand-foco-soft: #d1fae5;
 
+    /* Cores de status: Equilíbrio (amarelo) */
     --brand-equilibrio: #f59e0b;
     --brand-equilibrio-hover: #d97706;
     --brand-equilibrio-soft: #fef3c7;
+
+    /* Cores de status: Livre (cinza médio) */
     --brand-livre: #64748b;
     --brand-livre-hover: #475569;
     --brand-livre-soft: #e2e8f0;
     
+    /* Cores de status: Pular/Jejum (cinza claro) */
     --brand-pular: #94a3b8;
     --brand-pular-soft: #f1f5f9;
     
-    /* Superfícies e Estrutura */
+    /* Cores de fundo e superfícies */
     --bg-app: #f8fafc;
     --surface-card: #ffffff;
     --surface-subtle: #f1f5f9;
@@ -29,12 +36,14 @@
     --border-focus: #3b82f6;
 }
 
+/* Reset global de margens, paddings e box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos base do body */
 body {
     background-color: var(--bg-app);
     font-family:  "Inter", sans-serif;
@@ -42,6 +51,7 @@ body {
     font-size: 16px;
 }
 
+/* Container principal centralizado com largura máxima mobile-first */
 main {
     margin: auto;
     width: 100%;
@@ -57,12 +67,14 @@ h2 {
     margin: 16px auto;
 }
 
+/* Responsividade: telas menores que 380px */
 @media screen and (max-width:380px) {
     main {
         max-width: 300px;
     }
 }
 
+/* Responsividade: tablets (768px+) */
 @media screen and (min-width:768px){
     body {
         font-size: 18px;
@@ -73,6 +85,7 @@ h2 {
     }
 }
 
+/* Responsividade: desktops (1024px+) */
 @media screen and (min-width:1024px){
     body {
         font-size: 20px;
@@ -83,6 +96,7 @@ h2 {
     }
 }
 
+/* Responsividade: telas grandes (1440px+) */
 @media screen and (min-width:1440px){
     main {
         max-width: 760px;

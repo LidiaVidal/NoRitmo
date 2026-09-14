@@ -7,7 +7,9 @@
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <title>NoRitmo</title>
 </head>
+<!-- O id "page-historico" é usado no JS para carregar apenas os scripts desta página -->
 <body id="page-historico">
+    <!-- Cabeçalho com logo e botão de voltar à home -->
     <header class="section-header historico">
         <a href="../../index.html">
             <img src="../assets/img/logo.png" alt="">
@@ -15,16 +17,19 @@
         <a href="../../index.html" class="btn-navegar-pagina">
             <img src="../assets/icon/icon-arrow-left.png" alt="">Voltar para Hoje</a>
     </header>
+    <!-- Container principal onde o JS renderiza dinamicamente os cards do histórico -->
     <main class="container-do-historico">
         <h1 class="title-pagina">Seu histórico</h1>
 
+        <!-- Template estático de exemplo de um dia no histórico (substituído pelo JS) -->
         <section class="historico-dia" data-status="balanced">
             <header class="header-historico-section">
-        
+                <!-- Lado esquerdo: data e seta para expandir/recolher detalhes (acordeão) -->
                 <div class="header-left">
                     <span class="dateHistorico"></span> 
                     <img src="../assets/icon/icon-arrow-down.png" alt="Expandir detalhes" class="seta-acordeao">
                 </div>
+                <!-- Lado direito: score e status do dia -->
                 <div class="header-right">
                     <div class="score-historico">
                         <p class="score-number">60%</p>
@@ -34,6 +39,7 @@
                 </div>
                 
             </header>
+            <!-- Conteúdo expandível com detalhes de cada refeição do dia -->
             <div class="historico-content escondido">
                 <p class="historico-refeicao">Café da manhã: <span class="status-refeicao" data-status="focus">Foco</span></p>
                 <p class="historico-anotacoes">Ovos com café</p>

@@ -1,3 +1,4 @@
+/* Arquivo principal de estilos: importa todos os módulos CSS do projeto */
 @import url(./global.css);
 @import url(./header.css);
 @import url(./score.css);
