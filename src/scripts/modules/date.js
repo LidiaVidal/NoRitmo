@@ -1,6 +1,5 @@
 
-
-export function dataFormatada() {
+function dataFormatada() {
     const dataAtual = new Date()
     const dia = dataAtual.getDate()
     const mes = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(dataAtual);

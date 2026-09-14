@@ -60,7 +60,7 @@
     flex-direction: column;
 }
 
-.historico-dia .header-historico-section div #date {
+.historico-dia .header-historico-section div .dateHistorico {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-secondary);
@@ -125,6 +125,10 @@
 .historico-content {
     margin-top: 8px;
     display: block;
+}
+
+.historico-content.escondido {
+    display: none;
 }
 
 .historico-refeicao {

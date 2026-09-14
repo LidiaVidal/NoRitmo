@@ -1,4 +1,4 @@
-let historico = JSON.parse(localStorage.getItem('noRitmo_dados')) || []; 
+export let historico = JSON.parse(localStorage.getItem('noRitmo_dados')) || []; 
 
 export function historicoRefeicoes() {
     const dataAtual = document.getElementById('date');
@@ -30,6 +30,10 @@ export function historicoRefeicoes() {
         posicaoDoDia = historico.length - 1; 
     }
 
+    if (!historico[posicaoDoDia].refeicoes) historico[posicaoDoDia].refeicoes = {};
+    if (!historico[posicaoDoDia].anotacoes) historico[posicaoDoDia].anotacoes = {};
+
+
     refeicoes.forEach(section => {
         const nomeRefeicao = section.dataset.refeicao; 
         let valorRadio = ''; 
@@ -60,7 +64,10 @@ export function historicoRefeicoes() {
 
 
 export function carregarDadosIniciais() {
-    const dataAtual = document.getElementById('date').textContent;
+    const dataAtualElement = document.getElementById('date').textContent;
+
+    if (!dataAtualElement) return;
+    const dataAtual = dataAtualElement.textContent;
     const diaSalvo = historico.find(item => item.data === dataAtual);
 
     if (diaSalvo) {
@@ -68,8 +75,8 @@ export function carregarDadosIniciais() {
         
         refeicoes.forEach(section => {
             const nomeRefeicao = section.dataset.refeicao;
-            const valorSalvo = diaSalvo.refeicoes[nomeRefeicao];
-
+    
+            const valorSalvo = diaSalvo.refeicoes ? diaSalvo.refeicoes[nomeRefeicao] : '';
             const anotacaoSalva = diaSalvo.anotacoes ? diaSalvo.anotacoes[nomeRefeicao] : '';
 
             if (valorSalvo) {
@@ -88,5 +95,7 @@ export function carregarDadosIniciais() {
                 }
             }
         });
+
     }
+    console.log('Carregou os dados')
 }

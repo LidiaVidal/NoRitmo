@@ -22,6 +22,8 @@ function calcularProgressoDiario() {
     let refeicaoRegistrada = 0
     let valorRadio = ''
     let pontosRefeicao = 0
+
+    //Analisa cada clique e atribui uma pontuação
     const refeicoes = document.querySelectorAll('.section_meals')
     refeicoes.forEach(section => {
 
@@ -52,6 +54,8 @@ function calcularProgressoDiario() {
     
 }
 
+
+//Mostra score já estilizado na página principal
 function mostrarScore(pontos) {
     const scoreResultado = document.querySelector('.score-number')
     scoreResultado.textContent = `${pontos}%`

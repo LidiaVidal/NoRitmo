@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <title>NoRitmo</title>
 </head>
-<body>
+<body id="page-historico">
     <header class="section-header historico">
         <a href="../../index.html">
             <img src="../assets/img/logo.png" alt="">
@@ -15,14 +15,14 @@
         <a href="../../index.html" class="btn-navegar-pagina">
             <img src="../assets/icon/icon-arrow-left.png" alt="">Voltar para Hoje</a>
     </header>
-    <main>
+    <main class="container-do-historico">
         <h1 class="title-pagina">Seu histórico</h1>
 
         <section class="historico-dia" data-status="balanced">
             <header class="header-historico-section">
         
                 <div class="header-left">
-                    <span id="date"></span> 
+                    <span class="dateHistorico"></span> 
                     <img src="../assets/icon/icon-arrow-down.png" alt="Expandir detalhes" class="seta-acordeao">
                 </div>
                 <div class="header-right">
@@ -34,7 +34,7 @@
                 </div>
                 
             </header>
-            <div class="historico-content">
+            <div class="historico-content escondido">
                 <p class="historico-refeicao">Café da manhã: <span class="status-refeicao" data-status="focus">Foco</span></p>
                 <p class="historico-anotacoes">Ovos com café</p>
 
